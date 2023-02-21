@@ -69,8 +69,29 @@ flutter:
     - assets/story/timun_mas/
     - assets/story/pinokio/
     - assets/story/brothers_grimm/
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+    - assets/story/kuda_keledai/
+    - assets/story/jack/
+    - assets/story/putri_duyung/
+    - assets/story/putri_cantik/
+    - assets/story/kancil_siput/
+    - assets/story/kura_kelinci/
+    - assets/story/gajah_baik/
+    - assets/story/malin_kundang/
+    - assets/story/roro_jonggrang/
+    - assets/story/danau_toba/
+    - assets/story/tangkuban_perahu/
+    - assets/story/bawang_merah_putih/
+    - assets/story/situ_bagendit/
+    - assets/story/keong_mas/
+    - assets/story/batu_menangis/
+    - assets/story/aladin/
+    - assets/story/nabi_adam/
+    - assets/story/nabi_idris/
+    - assets/story/nabi_ibrahim/
+    - assets/story/nabi_luth/
+    - assets/story/nabi_yusuf/
+    - assets/story/nabi_ayub/
+    - assets/story/nabi_musa/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

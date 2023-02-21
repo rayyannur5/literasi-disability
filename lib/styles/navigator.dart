@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Nav {
-  static const opacityCurve = const Interval(0.0, 0.75, curve: Curves.fastOutSlowIn);
+  static const opacityCurve = Interval(0.0, 0.75, curve: Curves.fastOutSlowIn);
 
   static push(BuildContext context, Widget child) {
     return Navigator.of(context).push(PageRouteBuilder(

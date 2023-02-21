@@ -20,14 +20,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider<BackgroundAudio>(create: (context) => BackgroundAudio(),),
-        ChangeNotifierProvider<SFX>(create: (context) => SFX(),),
+        ChangeNotifierProvider<BackgroundAudio>(
+          create: (context) => BackgroundAudio(),
+        ),
+        ChangeNotifierProvider<SFX>(
+          create: (context) => SFX(),
+        ),
       ],
       child: MaterialApp(
-        home: Consumer<BackgroundAudio>(builder: (context, value, child) {
-          value.start();
-          return HomeScreen();
-        },),
+        home: Consumer<BackgroundAudio>(
+          builder: (context, value, child) {
+            value.start();
+            return const HomeScreen();
+          },
+        ),
       ),
     );
   }

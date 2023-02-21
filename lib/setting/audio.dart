@@ -1,12 +1,10 @@
-import 'dart:isolate';
-
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class BackgroundAudio extends ChangeNotifier {
-  AudioPlayer _audioPlayer = AudioPlayer();
+  final AudioPlayer _audioPlayer = AudioPlayer();
   bool isPlay = false;
 
   start() async {
@@ -18,6 +16,7 @@ class BackgroundAudio extends ChangeNotifier {
     Uint8List soundbytes = bytes.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
     isPlay = pref.getBool('backsound') ?? true;
     if (isPlay) {
+      _audioPlayer.setVolume(0.3);
       _audioPlayer.play(BytesSource(soundbytes));
     }
   }
@@ -32,7 +31,6 @@ class BackgroundAudio extends ChangeNotifier {
     if (value) {
       start();
     } else {
-      print('masuk sini');
       isPlay = false;
       _audioPlayer.pause();
     }
@@ -40,7 +38,7 @@ class BackgroundAudio extends ChangeNotifier {
 }
 
 class SFX extends ChangeNotifier {
-  AudioPlayer _audioPlayer = AudioPlayer();
+  final AudioPlayer _audioPlayer = AudioPlayer();
   bool isOn = false;
 
   play(asset) async {

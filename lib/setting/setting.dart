@@ -18,7 +18,7 @@ class _SettingScreenState extends State<SettingScreen> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
-        floatingActionButton: Container(
+        floatingActionButton: SizedBox(
           height: size.height / 5,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -32,8 +32,8 @@ class _SettingScreenState extends State<SettingScreen> {
                 'Pengaturan',
                 style: Style.title,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
               )
             ],
           ),
@@ -58,8 +58,8 @@ class _SettingScreenState extends State<SettingScreen> {
                         style: Style.title,
                       ),
                       value: value.isPlay,
-                      onChanged: (_value) {
-                        value.playpause(_value);
+                      onChanged: (value_) {
+                        value.playpause(value_);
                         setState(() {});
                       });
                 },

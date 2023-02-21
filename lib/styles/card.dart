@@ -11,6 +11,7 @@ class CustomCard extends StatefulWidget {
   const CustomCard({super.key, required this.imagePath, required this.title, required this.onTap});
 
   @override
+  // ignore: no_logic_in_create_state
   State<CustomCard> createState() => _CustomCardState(imagePath, title, onTap);
 }
 

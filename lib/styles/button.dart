@@ -9,6 +9,7 @@ class Button extends StatefulWidget {
   const Button({super.key, required this.imagePath, required this.onTap});
 
   @override
+  // ignore: no_logic_in_create_state
   State<Button> createState() => _ButtonState(imagePath, onTap);
 }
 
